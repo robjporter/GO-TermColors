@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"runtime"
 	"strings"
 )
 
@@ -71,6 +72,34 @@ const (
 var (
 	Output *bufio.Writer = bufio.NewWriter(os.Stdout)
 )
+
+func GetGoVersion() string {
+	return runtime.Version()
+}
+
+func GetPlatform() string {
+	return runtime.GOOS
+}
+
+func GetArchitecture() string {
+	return runtime.GOARCH
+}
+
+func GetNumCPU() string {
+	return string(runtime.NumCPU())
+}
+
+func GetGoPath() string {
+	return os.Getenv("GOPATH")
+}
+
+func GetGoRoot() string {
+	return runtime.GOROOT()
+}
+
+func GetComplier() string {
+	return runtime.Compiler
+}
 
 func getColor(code string) string {
 	//return fmt.Sprintf("\033[3%sm", code)
