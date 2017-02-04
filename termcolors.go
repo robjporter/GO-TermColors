@@ -6,6 +6,7 @@ import (
 	"os"
 	"runtime"
 	"strings"
+	"time"
 )
 
 const (
@@ -72,6 +73,14 @@ const (
 var (
 	Output *bufio.Writer = bufio.NewWriter(os.Stdout)
 )
+
+func GetFormattedTime() string {
+	return Now("Monday, 2 Jan 2006")
+}
+
+func Now(layout string) string {
+	return time.Now().Format(layout)
+}
 
 func GetGoVersion() string {
 	return runtime.Version()
