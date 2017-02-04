@@ -91,9 +91,10 @@ func (b Banner) print(text string, printOut bool) string {
 			bannerMaxHeight = linf.lineNum
 		}
 	}
+
 	ret := ""
 	// Render
-	for i := 0; i < bannerMaxHeight-1; i++ {
+	for i := 1; i < bannerMaxHeight-1; i++ {
 		thisLin := ""
 		for _, v := range text {
 			lines, linf := b.getOne(string(v))
@@ -109,6 +110,7 @@ func (b Banner) print(text string, printOut bool) string {
 			ret += thisLin + "\n"
 		}
 	}
+	ret = strings.TrimRight(ret, "\n")
 	return ret
 }
 
@@ -121,9 +123,22 @@ func (b Banner) BannerPrint(text string) {
 }
 
 func BannerPrint(s string) {
-	NewBanner(Ogre).Print(s)
+	NewBanner(Ogre).BannerPrint(s)
 }
 
-func BannerPrintS(s string) string {
-	return NewBanner(Ogre).PrintS(s)
+func BannerPrintS(s string, font string) string {
+	if font == "ogre" || font == "" {
+		return NewBanner(Ogre).BannerPrintS(s)
+	} else if font == "small" {
+		return NewBanner(Small).BannerPrintS(s)
+	}
+	return ""
+}
+
+func BannerPrintLineS(s string, number int) string {
+	str := ""
+	for i := 0; i < number; i++ {
+		str += s
+	}
+	return str
 }

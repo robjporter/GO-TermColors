@@ -58,7 +58,6 @@ var Ogre = map[string]string{
  _
 (_)
 | |
-| |
 |_|
 `,
 	"j": `
