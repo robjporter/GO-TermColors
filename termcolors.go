@@ -166,7 +166,7 @@ func StrikeThrough(str string) string {
 }
 
 func test() {
-	Clear()
+	ClearScreen()
 	fmt.Println(Bold("BOLD"))
 	fmt.Println(Italic("ITALIC"))
 	fmt.Println(Underline("UNDERLINE"))
