@@ -1,3 +1,6 @@
+// Generate more fonts her
+// http://patorjk.com/software/taag/#p=display&f=Small&t=.
+
 package termcolors
 
 import (
@@ -138,6 +141,14 @@ func BannerPrintS(s string, font string) string {
 func BannerPrintLineS(s string, number int) string {
 	str := ""
 	for i := 0; i < number; i++ {
+		str += s
+	}
+	return str
+}
+
+func BannerPrintLineCommentS(s string, comment string, number int) string {
+	str := strings.ToUpper(comment)
+	for i := 0; i < number-len(comment); i++ {
 		str += s
 	}
 	return str
