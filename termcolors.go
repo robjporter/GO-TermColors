@@ -94,8 +94,8 @@ func GetArchitecture() string {
 	return runtime.GOARCH
 }
 
-func GetNumCPU() string {
-	return string(runtime.NumCPU())
+func GetNumCPU() int {
+	return runtime.NumCPU()
 }
 
 func GetGoPath() string {

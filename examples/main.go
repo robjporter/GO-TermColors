@@ -9,6 +9,7 @@ func main() {
 	termcolors.ClearScreen()
 	fmt.Println(termcolors.BannerPrintS("aci", "small"))
 	fmt.Println(termcolors.BannerPrintLineS("=", 40))
+	fmt.Println(termcolors.BannerPrintLineCommentS("=", "TESTING", 40))
 	fmt.Println(termcolors.Bold("BOLD"))
 	fmt.Println(termcolors.Italic("ITALIC"))
 	fmt.Println(termcolors.Underline("UNDERLINE"))
