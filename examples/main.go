@@ -8,9 +8,9 @@ import (
 
 func main() {
 	termcolors.ClearScreen()
-	termcolors.PrintNewFigure("ACI", "3x5", true)
-	fmt.Println(termcolors.GetNewFigure("ACI", "3x5", true))
-	fmt.Println(termcolors.BannerPrintS("aci", "small"))
+	termcolors.PrintNewFigure("TEST", "3x5", true)
+	fmt.Println(termcolors.GetNewFigure("TEST", "rounded", true))
+	fmt.Println(termcolors.BannerPrintS("test", "small"))
 	fmt.Println(termcolors.BannerPrintLineS("=", 40))
 	fmt.Println("GoVersion: " + termcolors.GetGoVersion())
 	fmt.Println("GoArch: " + termcolors.GetArchitecture())
@@ -29,7 +29,6 @@ func main() {
 	fmt.Println(termcolors.Background("BACKGROUND", termcolors.RED))
 	fmt.Println(termcolors.Color("COLOR", termcolors.YELLOW))
 	fmt.Println(termcolors.Highlight("HIGHLIGHT", "GHLI", termcolors.BRIGHTYELLOW))
-	//fmt.Println(MoveTo("TESTING", 40, 0))
 	fmt.Println(termcolors.Color(termcolors.Bold("BOLD YELLOW"), termcolors.YELLOW))
 	fmt.Println(termcolors.Background(termcolors.Color(termcolors.Bold("BOLD YELLOW WITH BACKGROUND"), termcolors.YELLOW), termcolors.RED))
 	fmt.Println(termcolors.Color("BLACK", termcolors.BLACK))
