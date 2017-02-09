@@ -137,19 +137,3 @@ func BannerPrintS(s string, font string) string {
 	}
 	return ""
 }
-
-func BannerPrintLineS(s string, number int) string {
-	str := ""
-	for i := 0; i < number; i++ {
-		str += s
-	}
-	return str
-}
-
-func BannerPrintLineCommentS(s string, comment string, number int) string {
-	str := strings.ToUpper(comment)
-	for i := 0; i < number-len(comment); i++ {
-		str += s
-	}
-	return str
-}
